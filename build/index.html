@@ -1,89 +1,199 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.8.3/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.8.3/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.8.3/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+<body>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <section class="hero ">
+        <header class="main-head sticky" id="myheader">
+            <nav class="navigation">
+                <div class="logo">
+                    <img src="./imgs/logo-white.png" alt="The logo of the site">
+                </div>
+
+                <div class="toggle">
+                    <!-- <img src="./imgs/download.svg" alt=""> -->
+                    <span class="toggle-line"></span>
+                    <span class="toggle-line"></span>
+                    <span class="toggle-line"></span>
+                </div>
+                <input type="checkbox" name="" id="" class="menu-check">
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">Landings <i class="fa fa-caret-down"></i> </a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="">debitis</a></li>
+                                <li><a href="">Fruits</a></li>
+                                <li><a href="">Crickets</a></li>
+                                <li><a href="">Hoceky</a></li>
+                            </ul>
+                        </div>
+                    </li> <hr>
+                    <li>
+                        <a href="#">Pages <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="">Pricings</a></li>
+                                <li><a href="">Portfolio</a></li>
+                                <li><a href="">Team</a></li>
+                                <li><a href="">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </li> <hr>
+                    <li><a href="#">Blog</a></li> <hr>
+                    <li><a href="#">Support</a></li> <hr>
+                </ul>
+
+                <a href="#" class="btn header-btn">Buy Now</a>
+            </nav>
+        </header>
+        <div class="hero-text flex">
+            <h1>The new scope reinvented for the solar industry.</h1>
+            <a href="#"><button class="btn hero-txt-btn">see more info about us</button></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum at modi laudantium. Lorem, ipsum dolor.
+            </p>
+        </div>
+    </section>
+     <section class="dashboard">
+         <div class="item-1 dashboard-item">
+         <h3>901</h3>
+         <p>Lorem ipsum dolor sit amet consectetur.</p>
+         </div>
+         <div class="item-2 dashboard-item">
+             <h3>365</h3>
+             <p>Lorem ipsum dolor sit amet consectetur.</p>
+         </div>
+         <div class="item-3 dashboard-item">
+             <h3>1032</h3>
+             <p>Lorem ipsum dolor sit amet consectetur.</p>
+         </div>
+         <div class="item-4 dashboard-item">
+             <h3>6653</h3>
+             <p>Lorem ipsum dolor sit amet consectetur.</p>
+         </div>
+     </section>
+
+     <section class="fusce">
+      <img src="./imgs/image (2).png" alt="A worker image in caps">
+      <div class="fusce-text">
+          <h1>Fusce interdum justo libro</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati velit reprehenderit id tempore. Eveniet error hic accusantium molestias deleniti vero dolorem in possimus dolor blanditiis.</p>
+          <a href="" class="btn">Learn more</a>
+      </div>
+      <img src="./imgs/image (3).png" alt="">
+     </section>
+
+     <section class="service">
+       <div class="service-text">
+        <h1>We provide the best service in town.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit tenetur commodi molestias ea quibusdam sit recusandae ipsum maiores explicabo ipsam distinctio dignissimos vero voluptates amet animi, voluptatum aspernatur minima.</p>
+       </div>
+     </section>
+     
+     <section class="solar">
+     <div class="solar-container">
+         <div class="solor-item-1 solor-item">
+            <h2>solar panel installation</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi iste deleniti obcaecati a accusantium architecto.</p>
+            <img src="./imgs/icon.png" alt="">
+            <h1>01</h1>
+         </div>
+         <div class="solor-item-2 solor-item">
+            <h2>solar panel installation</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi iste deleniti obcaecati a accusantium architecto.</p>
+            <img src="./imgs/icon.png" alt="">
+            <h1>02</h1>
+         </div>
+         <div class="solor-item-3 solor-item">
+            <h2>solar panel installation</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi iste deleniti obcaecati a accusantium architecto.</p>
+            <img src="./imgs/icon.png" alt="">
+            <h1>03</h1>
+         </div>
+     </div>
+     </section>
+
+     <section class="testemonial">
+         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam ullam ab. Facilis iure consequuntur nemo impedit voluptatum molestiae vero. Lorem ipsum dolor sit.</h2>
+         <div class="arlene-testemonial">
+             <img src="./imgs/image (6).png" alt="">
+             <div class="arlene-testemonial-text">
+                <h4>ARLENE MCCOY</h4>
+                <p>New York, USA</p>
+             </div>
+         </div>
+     </section>
+     <section class="company">
+     <div class="company-text">
+         <h1>The company started in 1985 by Mark Tremson</h1>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, cumque incidunt. Natus rem sunt exercitationem quas porro, dolorum itaque voluptates officia voluptate optio, tempora eius, molestias beatae illo expedita! Cupiditate.</p>
+         <a href="" class="btn">LEARN MORE</a>
+     </div>
+     <div class="company-img">
+         <img src="./imgs/image (1).png" alt="A women and lady working on solar pannel">
+     </div>
+     </section>
+
+     <section class="started">
+        <h1>Get Started With us today,fast</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae totam tempore architecto officiis voluptates expedita impedit recusandae, esse atque eaque?</p>
+        <a href="" class="btn">GET STARTED NOW</a>
+     </section>
+
+     <footer>
+        <div class="footer-container">
+            <div class="address">
+                <p>VISIT US</p>
+                <p>2800 S. River Rd. Suite 500</p>
+                <p>Des Plaines, IL 60018</p>
+                <ul class="social-links">
+                <li><a href=""><img src="./imgs/linkden.jpg" alt=""></a></li>
+                <li><a href=""><img src="./imgs/facebook.png" alt=""></a></li>
+                <li><a href=""><img src="./imgs/tiwiter.png" alt=""></a></li>
+                </ul>
+            </div>
+   
+            <div class="contacts">
+                <p>REACH OUT</p>
+                <p>hello@focdustrian.com</p>
+                <p>+44123456789</p>
+            </div>
+   
+            <div class="footer-form">
+                <p>GET IN CONTACT</p>
+                <form action="
+                ">
+   
+              <div class="name-email-container">
+                <input type="text" name="" id="" placeholder="Full name">
+                
+                <input type="email" name="" id="" placeholder="Email">
+              </div>
+   
+               <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+               <a href="" class="btn">SEND</a>
+               </form>
+            </div>
+        </div>
+         <div class="copyright-btn">
+            <p>&copy; 2021 FinestDevs All Rights Reserved</p>
+            <div class="footer-btn">
+               <button><img src="./imgs/download.svg" alt=""><p>Downlad Shade Now</p></button>
+           </div>
+         </div>
+     </footer>
+ <script src="./js/script.js"></script>
+</body>
+
 </html>
